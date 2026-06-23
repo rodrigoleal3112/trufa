@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Trufas Premium Artesanais</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- CABEÇALHO -->
+<header>
+
+    <div class="logo">
+        🍫 Trufas Premium
+    </div>
+
+
+    <nav>
+
+        <a href="#inicio">Início</a>
+        <a href="#sabores">Sabores</a>
+        <a href="#sobre-secao">Sobre</a>
+        <a href="#contato-secao">Contato</a>
+
+    </nav>
+
+
+    <button id="tema-btn" onclick="mudarModo()">
+        🌙 Escuro
+    </button>
+
+
+</header>
+
+
+
+<!-- CARRINHO -->
+<div class="carrinho">
+
+    🛒 Itens:
+    <span id="contador">0</span>
+
+    |
+
+    Total:
+    R$ <span id="total">0.00</span>
+
+
+    <button onclick="finalizarPedido()">
+        Finalizar
+    </button>
+
+</div>
+
+
+
+
+<!-- INICIO -->
+
+<section class="hero" id="inicio">
+
+
+<h1>
+Trufas Premium Artesanais
+</h1>
+
+
+<p>
+Chocolate de qualidade, recheios cremosos
+e sabores preparados com carinho.
+</p>
+
+
+</section>
+
+
+
+
+
+<!-- SABORES -->
+
+<section id="sabores">
+
+
+<h2 class="titulo">
+Nossos Sabores
+</h2>
+
+
+
+<div class="cards">
+    <!-- BRIGADEIRO -->
+<div class="card">
+
+<img src="fotos/brigadeiro.jpg" alt="Brigadeiro">
+
+<h3>🍫 Brigadeiro</h3>
+
+<p>O clássico brigadeiro artesanal com muito chocolate.</p>
+
+<div class="preco">
+R$ 4,00
+</div>
+
+<div class="botoes-acoes">
+
+<button class="comprar"
+onclick="adicionarCarrinho('Brigadeiro',4)">
+Comprar
+</button>
+
+<button class="remover"
+onclick="removerCarrinho('Brigadeiro')">
+Retirar
+</button>
+
+</div>
+
+</div>
+
+
+
+<!-- BEIJINHO -->
+<div class="card">
+
+<img src="fotos/beijinho.jpg" alt="Beijinho">
+
+<h3>🥥 Beijinho</h3>
+
+<p>Coco cremoso com sabor tradicional.</p>
+
+<div class="preco">
+R$ 4,00
+</div>
+
+<div class="botoes-acoes">
+
+<button class="comprar"
+onclick="adicionarCarrinho('Beijinho',4)">
+Comprar
+</button>
+
+<button class="remover"
+onclick="removerCarrinho('Beijinho')">
+Retirar
+</button>
+
+</div>
+
+</div>
+
+
+
+
+<!-- CHOCOMENTA -->
+<div class="card">
+
+<img src="fotos/chocomenta.jpg" alt="Chocomenta">
+
+<h3>🌿 Chocomenta</h3>
+
+<p>Chocolate com toque refrescante de menta.</p>
+
+<div class="preco">
+R$ 4,00
+</div>
+
+<div class="botoes-acoes">
+
+<button class="comprar"
+onclick="adicionarCarrinho('Chocomenta',4)">
+Comprar
+</button>
+
+
+<button class="remover"
+onclick="removerCarrinho('Chocomenta')">
+Retirar
+</button>
+
+
+</div>
+
+</div>
+
+
+
+
+<!-- PAÇOCA -->
+<div class="card">
+
+<img src="fotos/pacoca.jpg" alt="Paçoca">
+
+<h3>🥜 Paçoca</h3>
+
+<p>Recheio cremoso com sabor de amendoim.</p>
+
+<div class="preco">
+R$ 4,00
+</div>
+
+
+<div class="botoes-acoes">
+
+<button class="comprar"
+onclick="adicionarCarrinho('Paçoca',4)">
+Comprar
+</button>
+
+
+<button class="remover"
+onclick="removerCarrinho('Paçoca')">
+Retirar
+</button>
+
+
+</div>
+
+</div>
+
+
+
+
+<!-- PÉ DE MOLEQUE -->
+<div class="card">
+
+<img src="fotos/pedemoleque.jpg" alt="Pé de Moleque">
+
+<h3>🍬 Pé de Moleque</h3>
+
+<p>O sabor tradicional com toque artesanal.</p>
+
+
+<div class="preco">
+R$ 4,00
+</div>
+
+
+<div class="botoes-acoes">
+
+
+<button class="comprar"
+onclick="adicionarCarrinho('Pé de Moleque',4)">
+Comprar
+</button>
+
+
+<button class="remover"
+onclick="removerCarrinho('Pé de Moleque')">
+Retirar
+</button>
+
+
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<img src="fotos/limao.jpg">
+
+<h3>🍋 Mousse de Limão</h3>
+
+<p>Chocolate premium com recheio cremoso.</p>
+
+<div class="preco">
+R$ 4,00
+</div>
+
+
+<div class="botoes-acoes">
+
+<button class="comprar"
+onclick="adicionarCarrinho('Mousse de Limão',4)">
+Comprar
+</button>
+
+
+<button class="remover"
+onclick="removerCarrinho('Mousse de Limão')">
+Retirar
+</button>
+
+
+</div>
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<img src="fotos/morango.jpg">
+
+<h3>🍓 Mousse de Morango</h3>
+
+<p>Sabor suave e delicioso.</p>
+
+
+<div class="preco">
+R$ 4,00
+</div>
+
+
+<div class="botoes-acoes">
+
+<button class="comprar"
+onclick="adicionarCarrinho('Mousse de Morango',4)">
+Comprar
+</button>
+
+
+<button class="remover"
+onclick="removerCarrinho('Mousse de Morango')">
+Retirar
+</button>
+
+
+</div>
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<img src="fotos/maracuja.jpg">
+
+<h3>🥭 Maracujá</h3>
+
+<p>Doce e refrescante.</p>
+
+
+<div class="preco">
+R$ 4,00
+</div>
+
+
+<div class="botoes-acoes">
+
+<button class="comprar"
+onclick="adicionarCarrinho('Maracujá',4)">
+Comprar
+</button>
+
+
+<button class="remover"
+onclick="removerCarrinho('Maracujá')">
+Retirar
+</button>
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<img src="fotos/abacaxicomcoco.jpg">
+
+
+<h3>🍍 Abacaxi com Coco</h3>
+
+<p>Sabor tropical.</p>
+
+
+<div class="preco">
+R$ 4,00
+</div>
+
+
+<div class="botoes-acoes">
+
+
+<button class="comprar"
+onclick="adicionarCarrinho('Abacaxi com Coco',4)">
+Comprar
+</button>
+
+
+<button class="remover"
+onclick="removerCarrinho('Abacaxi com Coco')">
+Retirar
+</button>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<img src="fotos/docedeleitecomamendoin.jpg">
+
+
+<h3>🥜 Doce de Leite com Amendoim</h3>
+
+<p>Cremoso e crocante.</p>
+
+
+<div class="preco">
+R$ 4,00
+</div>
+
+
+<div class="botoes-acoes">
+
+
+<button class="comprar"
+onclick="adicionarCarrinho('Doce de Leite com Amendoim',4)">
+Comprar
+</button>
+
+
+<button class="remover"
+onclick="removerCarrinho('Doce de Leite com Amendoim')">
+Retirar
+</button>
+
+
+</div>
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<img src="fotos/ninho.jpg">
+
+
+<h3>🥛 Ninho</h3>
+
+
+<p>Recheio cremoso.</p>
+
+
+<div class="preco">
+R$ 4,00
+</div>
+
+
+<div class="botoes-acoes">
+
+
+<button class="comprar"
+onclick="adicionarCarrinho('Ninho',4)">
+Comprar
+</button>
+
+
+<button class="remover"
+onclick="removerCarrinho('Ninho')">
+Retirar
+</button>
+
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- SOBRE -->
+
+<section id="sobre-secao">
+
+
+<h2 class="titulo">
+Sobre as Trufas
+</h2>
+
+
+
+<div class="sobre-conteudo">
+
+
+<div class="sobre-imagem-container">
+
+<img src="fotos/mini.jpg"
+class="imagem-sobre-banner">
+
+</div>
+
+
+
+<div class="sobre-texto">
+
+
+<p>
+Produzimos trufas artesanais utilizando chocolates premium,
+ingredientes selecionados e muito carinho.
+</p>
+
+
+<p>
+Cada sabor é feito para entregar uma experiência especial.
+</p>
+
+
+<p>
+Aceitamos encomendas para festas, eventos e datas especiais.
+</p>
+
+
+<p>
+Trabalhamos sempre buscando qualidade e sabor.
+</p>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- CONTATO -->
+
+<section class="contato" id="contato-secao">
+
+
+<h2 class="titulo">
+Contato
+</h2>
+
+
+<p>
+📱 WhatsApp: (48) 99191-4218
+</p>
+
+
+<p>
+📱 WhatsApp: (48) 99841-9032
+</p>
+
+
+
+</section>
+
+
+
+
+<footer>
+
+© 2026 Trufas Premium Artesanais
+
+</footer>
+
+
+
+
+
+<a class="whatsapp"
+href="https://wa.me/5548991914218"
+target="_blank">
+
+📲 Pedir no WhatsApp
+
+</a>
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
